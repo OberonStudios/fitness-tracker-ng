@@ -1,5 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+
+/* Reset style */
+* {
+  font-family: 'Amiko', sans-serif;
+}
+
+html {
+  height: 100%
+}
+
 body {
   background-color: dimgrey;
+  margin: 0;
+  height: 100%;
 }
+/* End reset style */

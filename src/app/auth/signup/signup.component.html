@@ -1,5 +1,6 @@
 <section class="signup-form">
   <form 
+    fxLayoutGap="10px"
     fxLayout="column" 
     fxLayoutAlign="center center" 
     #formRef="ngForm" 
@@ -7,7 +8,7 @@
     <mat-form-field>
       <input
         ngModel
-        name = "email"  
+        name="email"  
         type="email" 
         matInput 
         placeholder="Enter email"
@@ -20,7 +21,7 @@
     <mat-form-field>
       <input
         ngModel
-        name = "password" 
+        name="password" 
         type="password" 
         matInput 
         placeholder="Enter password"
@@ -31,6 +32,27 @@
           {{ 6-passRef.value?.length }} more characters
         </mat-hint>
     </mat-form-field>
-    <button type="submit" mat-raised-button>Submit</button>
+    <mat-form-field>
+      <input 
+        matInput 
+        placeholder="Enter birthday" 
+        [max]="maxDate" 
+        [matDatepicker]="datepicker"
+        ngModel
+        name="birthday"
+        required>
+      <mat-datepicker-toggle 
+        matSuffix 
+        [for]="datepicker">
+      </mat-datepicker-toggle>
+      <mat-datepicker #datepicker></mat-datepicker>
+    </mat-form-field>
+    <mat-checkbox 
+      ngModel 
+      name="agree" 
+      labelPosition="before">
+        Agree to our terms and conditions
+    </mat-checkbox>
+    <button type="submit" [disabled]="formRef.invalid" mat-raised-button>Submit</button>
   </form>
 </section>
