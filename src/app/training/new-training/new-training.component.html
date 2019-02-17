@@ -1,11 +1,26 @@
-<section fxLayout fxLayoutAlign="center">
-  <mat-card fxFlex="50vw" fxFlex.sm="80vw" fxFlex.xs="90vw">
-    <mat-card-title>This is a card</mat-card-title>
-    <mat-card-content>
-      Select training type
+<section class="new-train" fxLayout fxLayoutAlign="center">
+  <mat-card fxFlex="50vw" fxFlex.sm="80vw" fxFlex.xs="100vw">
+    <mat-card-title fxLayoutAlign="center">You are about to begin new training!</mat-card-title>
+    <mat-card-content fxLayoutAlign="center">
+      <mat-form-field>
+        <mat-select placeholder="Select Type">
+          <mat-option value="crunches">
+            Crunches
+          </mat-option>
+          <mat-option value="touch-toes">
+            Touch Toes
+          </mat-option>
+          <mat-option value="side-lunges">
+            Side Lunges
+          </mat-option>
+          <mat-option value="burpees">
+            Burpees  
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button type="submit">Start</button>
+    <mat-card-actions fxLayoutAlign="center">
+      <button mat-button type="submit" (click)="onStartClick()">Start</button>
     </mat-card-actions>
   </mat-card>
 </section>
