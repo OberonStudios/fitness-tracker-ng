@@ -17,6 +17,9 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { StopTrainingComponent } from './training/current-training/stop-training.component';
 import { AuthService } from './auth/auth.service';
+import { NgxJsonViewerModule } from 'ngx-json-viewer';
+import { AceEditorModule } from 'ng2-ace-editor';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import { AuthService } from './auth/auth.service';
     FormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgxJsonViewerModule, 
+    AceEditorModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],

@@ -12,4 +12,21 @@ export class LandingComponent implements OnInit {
   ngOnInit() {
   }
 
+  data = {
+    'simple key': 'simple value'
+  };
+
+  get code () {
+    return JSON.stringify(this.data, null, 2);
+  }
+
+  set code (v) {
+    try{
+      this.data = JSON.parse(v);
+    }
+    catch(e) {
+      console.log('error occored while you were typing the JSON');
+    };
+  }
+
 }

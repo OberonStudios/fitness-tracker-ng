@@ -1,19 +1,31 @@
-<div 
-  class="welcome" 
-  fxLayout="column" 
-  fxLayout.gt-md="row" 
-  fxLayoutGap.gt-md="20px" 
-  fxLayoutAlign="center center">
+<div class="welcome" 
+      fxLayout="column"
+      fxLayoutGap="5px"  
+      fxLayoutGap.gt-md="20px" 
+      fxLayoutAlign="center left"
+      fxFlexOffset="15px">
     <section>
       <h1>ACTIVITY</h1>
       <p>Stay active and enjoy better health and more fun!</p>
     </section>
+    <div fxLayout="column" 
+          fxLayoutGap="20px" 
+          fxLayoutAlign="center left">
+      <div fxLayout="column" fxFlexOffset="30px">
+        <h3>Json Viewer</h3>
+        <ace-editor [(text)]="code" mode="json" style="width:90vw; height:400px;"></ace-editor>  
+      </div>
+      <div fxFlex>
+        <h4>Output</h4>
+        <ngx-json-viewer [json]="data"></ngx-json-viewer>
+      </div>  
+    </div>
     <section>
-      <h1>COMMUNITY</h1>
+      <h2>COMMUNITY</h2>
       <p>Get to know other people who share your passion!</p>
     </section>
     <section>
-      <h1>CHALLENGES</h1>
+      <h2>CHALLENGES</h2>
       <p>Never stop! Dive into new challenges every day</p>
     </section>
   </div>
